@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On and Of Methods</title>
+</head>
+<body>
+  <h1>Hello, This is Anirban Roy</h1>
+
+  <div id="box" class="test">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad veniam odio blanditiis quia, officiis vero sed! Libero iusto odit harum! Sapiente et facilis architecto libero laboriosam. Corrupti, alias tempore.</p>
+  </div>
+  <button id="button">Remove Event</button>
+
+  <script src="./js/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // On method to add event more then one
+      $("#box").on({
+        "click" : function() {
+          $(this).css({"background-color":"red", "color":"white", "padding":"10px"});
+        },
+        "mouseover" : function() {
+          $(this).css({"background-color":"green", "color":"white", "padding":"10px"});
+        },
+        "mouseout" : function() {
+          $(this).css({"background-color":"darkgreen", "color":"white", "padding":"10px"});
+        }
+      });
+      // Off Method to remove events
+      $("#button").click(function() {
+        $("#box").off("mouseover mouseout");
+      });
+    });
+  </script>
+</body>
+</html>

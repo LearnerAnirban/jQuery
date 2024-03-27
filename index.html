@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <h1>Hello, This is Anirban Roy</h1>
+
+  <div id="box" class="test">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad veniam odio blanditiis quia, officiis vero sed! Libero iusto odit harum! Sapiente et facilis architecto libero laboriosam. Corrupti, alias tempore.</p>
+  </div>
+  <div id="show"></div>
+  
+  <script src="./js/jquery.min.js"></script>
+  <script>
+    $("document").ready(function() {
+      // Click Event Syntex 1 (ON)
+      $("#box").on("click", function() {
+        $(this).css({"background":"red", "color":"white", "padding":"10px"});
+      });
+      // Click Event Syntex 2 (With out on)
+      $("#box").dblclick(function() {
+        $("#box").css({"background":"red", "color":"white", "padding":"10px"});
+        var a =$("#box").html();
+        $("#show").html(a);
+    
+
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>

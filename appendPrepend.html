@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Append and Prepend Methods</h1>
+  <ol id="list">
+    <li>List one</li>
+    <li>List two</li>
+  </ol>
+  <button id="btn1">Button 1</button>
+  <button id="btn2">Button 2</button>
+  <button id="before">Before</button>
+  <button id="after">After</button>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        // Append 
+        $("ol").append('<li> append list </li>');
+      });
+      $("#btn2").click(function() {
+        // Prepend
+        $("ol").prepend('<li> prepend list </li>');
+      });
+      $("#before").click(function() {
+        // Before
+        $("ol").before('<li> before  list </li>');
+      });
+      $("#after").click(function() {
+        // After
+        $("ol").after('<li> after list </li>');
+      });
+
+    });
+
+    $(content).prependTo(selector);
+    $(content).appendTo(selector);
+
+  </script>
+</body>
+</html>
